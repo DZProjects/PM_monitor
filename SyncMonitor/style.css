@@ -1,0 +1,84 @@
+#title{
+	text-align: center;
+	font-family: arial;
+	font-size: xxx-large;
+	font-weight: bold;
+}
+#sensorIframe{
+	height:600px !important;
+}
+
+.chartWrapper {
+    position: relative;
+}
+
+.chartWrapper > canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events:none;
+}
+
+.chartAreaWrapper {
+    width: 600px;
+    overflow-x: scroll;
+}
+
+.speedometer__needle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  top: 70%;
+  left: 50%;
+  transition: .3s ease-in-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+  margin: 8px 0 0;
+}
+
+.speedometer__needle:before {
+  content: '';
+  position: absolute;
+  border-radius: 5px;
+  border: 6px solid transparent;
+  border-right: 100px solid #FFF;
+  left: -220px;
+  top: 6px;
+  width: 0;
+  height: 0;
+}
+
+.canvas {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.row {
+    table-layout: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* padding-left: 50%; */
+    justify-content: center;
+}
+.pic {
+    vertical-align: baseline;
+    padding: 1%;
+}
+.pic:first-child {
+    padding-left: 0;
+}
+.pic img {
+    vertical-align: bottom; /* only needed for removing a few pixel gap between image and paragraph */
+    
+}
+.pic p {
+    margin: 0;
+    text-align: center;
+   
+}
